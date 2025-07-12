@@ -19,7 +19,7 @@ export function getNoteList(): Note[] {
   });
 }
 
-export function getUserItem(noteId: number): Note | null {
+export function getNoteItem(noteId: (number | null)): Note | null {
   const notes = getNoteList();
   const note = notes.find((note) => note.id === noteId);
   return note ? note : null;
