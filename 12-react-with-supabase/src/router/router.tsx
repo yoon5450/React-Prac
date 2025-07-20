@@ -1,5 +1,8 @@
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
+import Product from "@/pages/Product";
+import ProductDetail from "@/pages/ProductDetail";
+import Register from "@/pages/Register";
 
 
 
@@ -12,7 +15,7 @@ export const routes = [
   {
     title:'상품목록',
     path:'/Product',
-    element: <div>Product page</div>
+    element: <Product />
   },
   {
     title:'고객지원',
@@ -27,8 +30,13 @@ export const routes = [
   {
     title:'회원가입',
     path:'/Register',
-    element: <div>REGISTER</div>
+    element: <Register />
   },
+  {
+    title:'상품상세',
+    path:'/Product/:id', // 동적 라우팅
+    element:<ProductDetail/>
+  }
   
 ]
 

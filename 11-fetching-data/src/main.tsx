@@ -4,7 +4,10 @@ import '@/styles/main.css';
 import App from './components/context/App';
 // import Effect from './components/effect/Effect';
 // import Parent from './components/ref/Parent';
+import data from './data/data.json'
 
+
+console.log(data);
 
 const container = document.getElementById('react-app');
 

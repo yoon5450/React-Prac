@@ -72,7 +72,14 @@ function Login() {
           </div>
           <button type="submit">로그인</button>
           <hr />
-          <a href="">아직도 2.9cm 회원이 아니세요?</a>
+          <a href="#"
+          onClick={(e)=>{
+            e.preventDefault();
+            history.pushState(null, '', '/Register')
+            setHistoryRoute('/Register')
+          }
+          }
+          >아직도 2.9cm 회원이 아니세요?</a>
           {
             error && <p style={{paddingTop:'1rem', color:'red'}}>{error}</p>
           }

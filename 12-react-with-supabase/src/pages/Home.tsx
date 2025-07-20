@@ -16,7 +16,7 @@ function Home() {
         {
           x: 0,
           opacity: 1,
-          stragger: 0.3,
+          stagger: 0.3,
         }
       );
     }
