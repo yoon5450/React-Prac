@@ -1,1 +1,70 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+
+
+
+
+/* tailwind에 변수 추가 */
+@theme{
+  --color-mint-500: oklch(0.72 0.11 178);
+  /* --spacing-sm: 1rem;
+  --spacing-m: 2rem;
+  --spacing-l: 3rem; */
+}
+
+/* reset css 설정 preflight */
+@layer base{
+  a{
+    color: var(--color-blue-700);
+    text-decoration: underline;
+  }
+
+  h1{
+    font-size: var(--text-2xl);
+  }
+
+  h2{
+    font-size: var(--text-xl);
+  }
+
+  h3{
+    font-size: var(--text-lg);
+  }
+}
+
+/* 재사용이 많이 될 것 같은 css 속성을 정의 */
+@utility highlight{
+  background-color: red;
+  font-size: 2rem;
+  color: white;
+  padding:1rem;
+}
+
+/* 
+여러 속성을 묶는 재사용 컴포넌트 클래스 정의
+*/
+
+@layer components{
+  .card{
+    h2{
+      font-size: 2rem;
+    }
+    color: orange;
+    background-color: dodgerblue;
+  }
+}
+
+/* Tailwind 문법으로 조합 */
+@layer components{
+  ._card{
+    @apply rounded-xl bg-mint-500 text-white;
+
+    h2{
+      @apply text-xl font-semibold;
+    }
+  }
+}
+
+body{
+  background-color: rgb(40, 40, 68);
+}
